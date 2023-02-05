@@ -1,10 +1,12 @@
+package educative;
+
 import java.util.*;
 
-class TripletSumToZero {
+public class TripletSumToZero {
 
   public static List<List<Integer>> searchTriplets(int[] arr) {
     List<List<Integer>> triplets = new ArrayList<>();
-    
+
     Arrays.sort(arr);
     if (arr.length < 1 || arr[0] >=0 || arr[arr.length-1] <=0){
       // no elements || no opposite sign numbers
@@ -13,7 +15,7 @@ class TripletSumToZero {
 
     // Store combination as String
     Set<String> trackUniqueCombination = new HashSet<>();
-    
+
     for (int i = 0 ; i < arr.length; i++){
       for (int j = arr.length - 1 ; j > i ; j--){
         int sum = -1 * (arr[i] + arr[j]);
@@ -33,13 +35,13 @@ class TripletSumToZero {
         }
       }
     }
-    
+
     return triplets;
   }
 
   public static boolean findValue(int[] arr, int leftIndex, int rightIndex, int valueToSearch){
     int midIndex = leftIndex + (rightIndex - leftIndex)/2;
-    
+
     if (arr[midIndex] == valueToSearch){
       return true;
     }

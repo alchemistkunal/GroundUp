@@ -1,3 +1,5 @@
+package educative;
+
 import java.util.*;
 
 class TripletSumCloseToTarget {

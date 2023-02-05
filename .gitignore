@@ -5,6 +5,7 @@
 .idea/
 .vscode/
 *.iml
+out/
 
 # Project related paths
-src/interviews/*
+src/main/java/interviews
