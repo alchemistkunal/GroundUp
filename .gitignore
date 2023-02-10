@@ -9,3 +9,4 @@ out/
 
 # Project related paths
 src/main/java/interviews
+target/
